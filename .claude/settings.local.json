@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python skills/decompose-the-problem/demo.py)",
+      "Bash(python skills/redirect-direct-solution-requests/demo.py)",
+      "Bash(python examples/demo.py)"
+    ]
+  }
+}
