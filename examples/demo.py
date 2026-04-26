@@ -41,3 +41,18 @@ for msg in redirect_cases:
     result = redirect.run({"message": msg})
     print(f"Student: {msg}")
     print(f"Tutor:   {result['prompt']}\n")
+
+# ── explain-edge-cases ────────────────────────────────────────────────
+edge = load_skill(os.path.join(root, "skills", "explain-edge-cases", "logic.py"))
+
+print("=== explain-edge-cases ===\n")
+
+cases = [
+    "My code works fine for most inputs.",
+    "It fails sometimes but I don't know why.",
+]
+
+for msg in cases:
+    result = edge.run({"message": msg})
+    print(f"Student: {msg}")
+    print(f"Tutor:   {result['prompt']}\n")
