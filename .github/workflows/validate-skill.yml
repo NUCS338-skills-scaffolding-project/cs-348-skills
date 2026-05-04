@@ -29,14 +29,9 @@ jobs:
           python-version: '3.11'
 
       # Step 3: Install required Python packages
-<<<<<<< HEAD
-      - name: Install dependencies
-        run: pip install python-frontmatter
-=======
       # The validator inlines its frontmatter parser; only PyYAML is needed.
       - name: Install dependencies
         run: pip install pyyaml
->>>>>>> template/main
 
       # Step 4: Run the validation script
       - name: Validate skills.md files
