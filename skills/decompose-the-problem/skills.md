@@ -1,9 +1,18 @@
 ---
-skill_id: "decompose-the-problem"
+skill_id: "decompose-the-prob"
 name: "Decompose the Problem"
 skill_type: "instructional"
-tags: ["problem-solving", "lab0", "sorting", "statistics"]
-python_entry: "logic.py"
+stance: "socratic"
+course_types: ["cs"]
+tags: ["problem-solving", "problem-decomposition"]
+learning_goal_tags:
+  - "decompose-problems"
+  - "restate-the-problem"
+  - "extract-requirements"
+trigger_signals:
+  - "student says 'I don't know where to start'"
+  - "student expresses overwhelm or says 'this is too much'"
+  - "student asks what to do first without having attempted a breakdown"
 ---
 
 # Decompose the Problem

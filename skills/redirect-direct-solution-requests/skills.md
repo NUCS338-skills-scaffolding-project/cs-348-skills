@@ -1,9 +1,17 @@
 ---
-skill_id: "redirect-direct-solution-requests"
+skill_id: "redirect-direct"
 name: "Redirect Direct Solution Requests"
 skill_type: "instructional"
-tags: ["socratic", "lab0", "code-requests", "redirection"]
-python_entry: "logic.py"
+stance: "meta"
+course_types: ["cs"]
+tags: ["code-requests", "redirection"]
+learning_goal_tags:
+  - "request-targeted-help"
+  - "manage-effort"
+trigger_signals:
+  - "student asks tutor to write or complete code"
+  - "student says 'just show me' or 'what's the answer'"
+  - "student pastes code and asks for a fix without context"
 ---
 
 # Redirect Direct Solution Requests
