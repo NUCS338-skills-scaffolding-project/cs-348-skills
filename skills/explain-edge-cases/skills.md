@@ -2,8 +2,11 @@
 skill_id: "explain-edge-cases"
 name: "Explain Edge Cases"
 skill_type: "instructional"
+stance: "socratic"
 tags: ["testing", "edge-cases", "debugging"]
-python_entry: "logic.py"
+course_types: ["cs"]
+learning_goal_tags:
+  - "handle-edge-cases"
 ---
 
 # Explain Edge Cases
