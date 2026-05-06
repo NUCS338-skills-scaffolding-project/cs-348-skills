@@ -1,17 +1,21 @@
 ---
-skill_id: "compare-algorithm-strategies"
+skill_id: "compare-algorithms"
 name: "Compare Algorithm Strategies"
 skill_type: "instructional"
+stance: "socratic"
 tags: ["algorithms", "planning", "understanding", "comparison"]
-python_entry: "logic.py"
+course_types: ["cs"]
+learning_goal_tags:
+  - "compare-strategies"
 ---
+
 # Compare Algorithm Strategies
 
 ## Description
 Guides the student through a structured discussion of possible solution families for a given
 assignment, one strategy at a time. The agent generates strategies informed by the assignment
-and learning goals, then logic.py manages progress through them and summarizes understanding
-at the end.
+and learning goals. Once the student has thought through 2–3 strategies, ask them to pick one
+and give a summary of the strategies and their pros/cons.
 
 ## When to Trigger
 - Student asks how to approach a problem
@@ -30,10 +34,10 @@ transparent about that and invite the student to correct them.
 ## Flow
 
 ### Step 1 — Load Context
-If a learning goals file has been provided, read it before proceeding. Set `inferred` to False.
+If a learning goals file has been provided, read it before proceeding.
 If not, ask the student to describe the assignment, then use your judgment to infer what
 concepts the course is likely targeting. State your inferred learning goals clearly and ask
-the student to confirm or correct them before proceeding. Set `inferred` to True.
+the student to confirm or correct them before proceeding.
 
 ### Step 2 — Discuss Strategies One at a Time
 Use your judgment to identify a relevant strategy family for this assignment and learning goals.
@@ -41,36 +45,25 @@ Introduce it to the student with a Socratic opening question — do not describe
 
 As the student responds:
 - If they understood it → confirm their reasoning, then ask them to reason about the tradeoffs
-  before revealing them. Only share tradeoffs after the student has had a chance to think.
-- If they missed it → use your own judgment to give a hint based on the strategy. Do not
-  reveal tradeoffs yet. Ask them to try again.
+  before revealing them.
+  - If their tradeoff reasoning is correct → confirm and move on.
+  - If they miss a tradeoff → give a single targeted hint and ask them to try again. Only
+    share the tradeoff directly after a genuine attempt.
+- If they missed the strategy → give a hint based on the strategy. Do not reveal tradeoffs
+  yet. Ask them to try again.
 
-Once the discussion on a strategy is resolved, call `logic.py: run()` with:
-- `action`: "record_result"
-- `session_id`: a unique ID for this session (same ID for all calls)
-- `strategy`: a dict with:
-  - `id`: unique identifier e.g. "strategy_1"
-  - `name`: name of the strategy e.g. "Brute Force"
-  - `tradeoffs`: time/space complexity and when it applies
-  - `understood`: True if the student understood it, False if not
-- `learning_goals`: the confirmed or inferred learning goals (first call only)
-- `inferred`: True if goals were inferred, False if loaded from file (first call only)
-
-Then use your judgment to decide whether another strategy is worth discussing given the
-assignment and learning goals. If yes, repeat Step 2. If no, move to Step 3.
+Aim to cover 2–3 strategies total. After each one, use your judgment to decide whether
+another is worth discussing. If yes, repeat Step 2. If no, move to Step 3.
 
 ### Step 3 — Compare and Summarize
 Ask the student to compare the strategies they have discussed — which would they choose for
-this assignment and why, and what tradeoffs are they accepting?
+this assignment and why, and what tradeoffs are they accepting? Ask them to commit to a choice
+before moving on. Then present a tradeoff matrix summarizing all strategies discussed.
 
-Then call `logic.py: run()` with:
-- `action`: "summarize"
-- `session_id`: your session ID
-
-Use `result.understood` to acknowledge what the student grasped well.
-Use `result.gaps` to tell the student which strategies and tradeoffs to review.
-If `result.goals_caveat` is not null, share it with the student — be transparent that
-the learning goals were inferred and may not perfectly reflect the course's intentions.
+Reflect on which strategies the student understood and which they struggled with.
+Acknowledge what they grasped well, and name any strategies or tradeoffs they should
+review. If learning goals were inferred, be transparent that they may not perfectly
+reflect the course's intentions and invite the student to revisit them.
 
 ## Safe Output Types
 - Socratic opening questions for each strategy
@@ -78,13 +71,12 @@ the learning goals were inferred and may not perfectly reflect the course's inte
 - Tradeoff matrix
 - Confirmations or hints based on your own judgment
 - A final comparison question before summarizing
-- A summary based on logic.py summarize output
+- A closing summary reflecting on the strategies discussed
 
 ## Must Avoid
 - Revealing tradeoffs before the student has reasoned about them
 - Introducing a new strategy before the current one is resolved
 - Skipping the learning goals step
-- Forgetting to call record_result after each strategy is discussed
 - Claiming certainty about learning goals when they were inferred
 
 ## Example Exchange
@@ -102,6 +94,6 @@ the learning goals were inferred and may not perfectly reflect the course's inte
 
 > **Student:** "It would get really slow"
 >
-> **Tutor:** *(student understood it, calls record_result with understood: True)*
+> **Tutor:** *(student understood it)*
 > "Right — it's O(n²) time. Now, is there anything you could do to the array first that
 > might make the problem easier to solve?"
