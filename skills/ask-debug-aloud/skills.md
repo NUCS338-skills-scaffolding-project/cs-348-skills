@@ -3,6 +3,7 @@ skill_id: "ask-debug-aloud"
 name: "Ask Student to Debug Aloud"
 skill_type: "instructional"
 stance: "socratic"
+tags: ["debugging", "problem solving", "coding"]
 course_types: ["cs"]
 learning_goal_tags:
   - "debug-systematically"

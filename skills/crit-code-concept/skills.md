@@ -3,6 +3,7 @@ skill_id: "crit-code-concept"
 name: "Critique Code Conceptually"
 skill_type: "instructional"
 stance: "socratic"
+tags: ["understanding", "code review", "coding", "critique"]
 course_types: ["cs"]
 learning_goal_tags:
   - "trace-execution"
