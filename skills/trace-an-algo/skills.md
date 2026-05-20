@@ -7,6 +7,10 @@ tags: ["algorithms", "planning", "understanding"]
 course_types: ["cs"]
 learning_goal_tags:
   - "trace-execution"
+trigger_signals:
+  - "help-me-trace-an-algorithm"
+  - "walk-though-an-example-of-an-algorithm-trace"
+  - "why-is-this-the-correct-output-of-the-algorithm"
 ---
 
 # Skill Name

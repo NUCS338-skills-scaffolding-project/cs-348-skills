@@ -7,6 +7,11 @@ tags: ["motivation", "context", "real-world", "comprehension"]
 course_types: ["cs"]
 learning_goal_tags:
   - "restate-the-problem"
+trigger_signals:
+  - "why-do-we-have-to-implement-this"
+  - "when-would-I-use-this"
+  - "what-are-some-real-life-examples"
+  - "why-is-this-useful"
 ---
 
 # Bigger Picture: Why Are We Doing This?

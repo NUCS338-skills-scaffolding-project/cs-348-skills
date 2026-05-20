@@ -7,6 +7,10 @@ tags: ["pseudocode", "design", "clarity", "correctness"]
 course_types: ["cs"]
 learning_goal_tags:
   - "evaluate-readability"
+trigger_signals:
+  - "is-this-pseudocode-good"
+  - "does-my-plan-sound-good"
+  - "I-have-written-this-pseudocode"
 ---
 
 # Critique Pseudocode

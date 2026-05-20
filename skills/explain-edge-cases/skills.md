@@ -7,6 +7,10 @@ tags: ["testing", "edge-cases", "debugging"]
 course_types: ["cs"]
 learning_goal_tags:
   - "handle-edge-cases"
+trigger_signals:
+  - "why-is-my-code-failing-on-this-weird-test"
+  - "it-passed-a-single-test-am-I-done"
+  - "this-should-work-in-the-common-case"
 ---
 
 # Explain Edge Cases

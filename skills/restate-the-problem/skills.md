@@ -7,6 +7,10 @@ tags: ["comprehension", "problem-decomposition", "planning"]
 course_types: ["cs", "humanities"]
 learning_goal_tags:
   - "restate-the-problem"
+trigger_signals:
+  - "what-do-I-do"
+  - "I-don't-understand-what-this-is-saying"
+  - "what-is-this-assignment-really-asking"
 ---
 
 # Restate the Problem

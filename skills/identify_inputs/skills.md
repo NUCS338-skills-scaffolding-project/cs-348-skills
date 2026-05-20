@@ -7,6 +7,10 @@ tags: ["problem-decomposition", "inputs", "parameters", "design"]
 course_types: ["cs"]
 learning_goal_tags:
   - "specify-io"
+trigger_signals:
+  - "what-parameters-do-I-need"
+  - "what-should-this-function-take-in"
+  - "what-format-is-the-input"
 ---
 
 # Identify Inputs

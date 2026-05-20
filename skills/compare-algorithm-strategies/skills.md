@@ -7,6 +7,11 @@ tags: ["algorithms", "planning", "understanding", "comparison"]
 course_types: ["cs"]
 learning_goal_tags:
   - "compare-strategies"
+trigger_signals:
+  - "help-me-compare-these-algorithms"
+  - "when-should-I-use-one-algorithm-or-another"
+  - "what-are-the-tradeoffs-between-these-algorithms"
+  - "give-me-the-pros-and-cons-of-these-approaches"
 ---
 
 # Compare Algorithm Strategies
