@@ -10,9 +10,9 @@ learning_goal_tags:
   - "trace-execution"
   - "evaluate-reasoning"
 trigger_signals:
-  - "my-code-has-a-bug-and-I-don't-know-where-it-is"
-  - "this-isn't-working-and-I-don't-know-why"
-  - "my-code-is-giving-an-answer-I-don't-expect
+  - "my-code-has-a-bug-and-I-do-not-know-where-it-is"
+  - "this-isn't-working-and-I-do-not-know-why"
+  - "my-code-is-giving-an-answer-I-do-not-expect"
 ---
 
 # Ask Student to Debug Aloud
