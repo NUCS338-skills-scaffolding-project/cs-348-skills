@@ -10,9 +10,9 @@ learning_goal_tags:
   - "identify-invariants"
   - "surface-assumptions"
 trigger_signals:
-  - "my code works but I don't know why"
-  - "it passes the tests but I'm not sure what this part is doing"
-  - "code is correct but the logic is unclear to me"
+  - "my-code-works-but-I-don't-know-why"
+  - "it-passes-the-tests-but-I'm-not-sure-what-this-part-is-doing"
+  - "code-is-correct-but-the-logic-is-unclear-to-me"
 ---
 
 # Critique Code Conceptually
