@@ -10,9 +10,10 @@ learning_goal_tags:
   - "restate-the-problem"
   - "extract-requirements"
 trigger_signals:
-  - "student says 'I don't know where to start'"
-  - "student expresses overwhelm or says 'this is too much'"
-  - "student asks what to do first without having attempted a breakdown"
+  - "where-do-I-even-start"
+  - "I-am-overwhelmed"
+  - "what-do-I-do"
+  - "there-is-too-much-to-do"
 ---
 
 # Decompose the Problem

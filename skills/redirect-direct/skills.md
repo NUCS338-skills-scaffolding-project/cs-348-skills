@@ -9,9 +9,9 @@ learning_goal_tags:
   - "request-targeted-help"
   - "manage-effort"
 trigger_signals:
-  - "student asks tutor to write or complete code"
-  - "student says 'just show me' or 'what's the answer'"
-  - "student pastes code and asks for a fix without context"
+  - "just-do-it-for-me"
+  - "just-write-the-code-for-me'"
+  - "can-you-just-show-me-the-right-answer"
 ---
 
 # Redirect Direct Solution Requests
