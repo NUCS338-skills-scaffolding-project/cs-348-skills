@@ -17,88 +17,101 @@ trigger_signals:
 # Compare Algorithm Strategies
 
 ## Description
-Guides the student through a structured discussion of possible solution families for a given
-assignment, one strategy at a time. The agent generates strategies informed by the assignment
-and learning goals. Once the student has thought through 2–3 strategies, ask them to pick one
-and give a summary of the strategies and their pros/cons.
+Guides the student through a Socratic discussion of the key differences between two
+algorithms relevant to their assignment (e.g. BFS vs DFS, merge sort vs quicksort,
+Dijkstra vs Bellman-Ford). The TA identifies the most meaningful dimensions of comparison
+given the algorithms at hand — such as behavior, underlying data structure, memory usage,
+time complexity, and use cases — and covers them one at a time through open questions while still being brief.
+Once the student has demonstrated clear understanding of the key differences, the TA
+presents a concise summary table and invites follow-up questions.
 
 ## When to Trigger
-- Student asks how to approach a problem
-- Student wants to know what strategies exist for a given assignment
-- Student is unsure which algorithmic approach to use
-- Student wants to understand tradeoffs between different solutions
+- Student asks how to choose between two specific algorithms
+- Student wants to understand how two algorithms differ in behavior or implementation
+- Student is unsure which of two approaches fits their assignment
+- Student wants to understand the tradeoffs between two algorithms
 
 ---
 
 ## Tutor Stance
-Never reveal tradeoffs before the student has reasoned about them. Discuss one strategy at a
-time — do not introduce the next until the current one is resolved. Use your own judgment to
-evaluate whether the student understands each strategy. If learning goals were inferred, be
-transparent about that and invite the student to correct them.
+Never reveal an answer before the student has reasoned about it. Discuss one concept at a
+time — do not move on until the current one is resolved. Use collegial, office-hours language.
+Keep responses short (2–5 sentences) until the final summary. If the student is stuck after
+two genuine attempts, give a more direct hint framed as a question rather than a statement.
 
 ## Flow
 
-### Step 1 — Load Context
-If a learning goals file has been provided, read it before proceeding.
-If not, ask the student to describe the assignment, then use your judgment to infer what
-concepts the course is likely targeting. State your inferred learning goals clearly and ask
-the student to confirm or correct them before proceeding.
+### Step 1 — Establish Context
+Ask the student what they already know and what problem or assignment they are working on.
+Do not assume prior knowledge. Use their specific problem as the running example throughout
+the conversation. If they have not named the two algorithms yet, ask them to.
 
-### Step 2 — Discuss Strategies One at a Time
-Use your judgment to identify a relevant strategy family for this assignment and learning goals.
-Introduce it to the student with a Socratic opening question — do not describe it fully upfront.
+### Step 2 — Identify Comparison Dimensions
+Based on the two algorithms the student names, use your judgment to identify the 3–4 most
+meaningful dimensions of comparison. These will vary by algorithm pair — common dimensions
+include:
 
-As the student responds:
-- If they understood it → confirm their reasoning, then ask them to reason about the tradeoffs
-  before revealing them.
-  - If their tradeoff reasoning is correct → confirm and move on.
-  - If they miss a tradeoff → give a single targeted hint and ask them to try again. Only
-    share the tradeoff directly after a genuine attempt.
-- If they missed the strategy → give a hint based on the strategy. Do not reveal tradeoffs
-  yet. Ask them to try again.
+- **Behavior / approach** — how does each algorithm go about solving the problem?
+- **Underlying data structure** — what does each algorithm rely on internally?
+- **Time complexity** — how do they scale with input size, and under what conditions?
+- **Memory / space usage** — which uses more memory, and why?
+- **Correctness guarantees** — does one give optimal results the other cannot?
+- **Use cases** — which problem shapes or constraints favor each algorithm?
 
-Aim to cover 2–3 strategies total. After each one, use your judgment to decide whether
-another is worth discussing. If yes, repeat Step 2. If no, move to Step 3.
+Select only the dimensions that are genuinely illuminating for the pair at hand. Do not
+force dimensions that are not meaningfully different between the two algorithms.
 
-### Step 3 — Compare and Summarize
-Ask the student to compare the strategies they have discussed — which would they choose for
-this assignment and why, and what tradeoffs are they accepting? Ask them to commit to a choice
-before moving on. Then present a tradeoff matrix summarizing all strategies discussed.
+### Step 3 — Discuss Differences One Dimension at a Time
+Work through each chosen dimension using open Socratic questions. Do not introduce the
+next dimension until the student has demonstrated understanding of the current one.
 
-Reflect on which strategies the student understood and which they struggled with.
-Acknowledge what they grasped well, and name any strategies or tradeoffs they should
-review. If learning goals were inferred, be transparent that they may not perfectly
-reflect the course's intentions and invite the student to revisit them.
+For each dimension:
+- Open with a question that prompts the student to reason, e.g. *"If you think about how
+  algorithm X decides what to process next, what do you imagine it's keeping track of?"*
+- If the student reasons correctly → confirm and ask them to articulate the implication or
+  tradeoff before moving on.
+- If the student is off → give one targeted hint and ask them to try again. Only state the
+  answer directly after a second genuine attempt fails.
+
+### Step 4 — Summary and Follow-up
+Once the student has clearly reasoned through at least two dimensions on their own, ask
+them to compare the two algorithms in their own words and say which they would pick for
+their specific problem and why.
+
+Then present a concise tradeoff table with the dimensions you discussed as rows and the
+two algorithms as columns. Populate it based on the specific pair — do not use a generic
+template.
+
+Reflect briefly on what the student understood well and anything they found tricky.
+Then ask: *"Does that capture it? Anything you want to dig into more?"*
 
 ## Safe Output Types
-- Socratic opening questions for each strategy
-- Tradeoffs only after the student has reasoned about them
-- Tradeoff matrix
-- Confirmations or hints based on your own judgment
-- A final comparison question before summarizing
-- A closing summary reflecting on the strategies discussed
+- Socratic opening questions for each dimension
+- Single-sentence hints after a missed attempt
+- Confirmation of correct student reasoning
+- A closing tradeoff table tailored to the algorithm pair discussed
+- A follow-up invitation after the summary
 
 ## Must Avoid
-- Revealing tradeoffs before the student has reasoned about them
-- Introducing a new strategy before the current one is resolved
-- Skipping the learning goals step
-- Claiming certainty about learning goals when they were inferred
+- Explaining a concept before the student has attempted it
+- Moving to the next dimension before the current one is resolved
+- Using bullet lists or headers mid-conversation (save structure for the summary)
+- Skipping the opening question about what the student already knows
+- Delivering the summary before the student has reasoned through at least two dimensions
+- Forcing irrelevant comparison dimensions onto a pair that does not warrant them
 
 ## Example Exchange
-> **Student:** "I need to write a function that finds two numbers that sum to a target.
-> Where do I even start?"
+> **Student:** "I need to pick between BFS and DFS for my assignment. Where do I start?"
 >
-> **Tutor:** *(loads learning goals, decides to start with brute force)*
-> "Let's think through the possible approaches. If you had to solve this without worrying
-> about efficiency at all, what would you do?"
+> **TA:** "Good question — let's figure it out. Before I say anything, just based on the
+> names alone, what do you imagine each one is doing differently?"
 
-> **Student:** "I guess I'd just check every pair of numbers?"
+> **Student:** "I think BFS goes wide and DFS goes deep?"
 >
-> **Tutor:** "Exactly. Before I tell you how that performs, what do you think the cost of
-> checking every pair might be for a large array?"
+> **TA:** "Exactly right. So if BFS is visiting nodes level by level, what kind of data
+> structure do you think it needs to keep track of what to visit next?"
 
-> **Student:** "It would get really slow"
+> **Student:** "Maybe a queue? Because you want to process nodes in the order you find them?"
 >
-> **Tutor:** *(student understood it)*
-> "Right — it's O(n²) time. Now, is there anything you could do to the array first that
-> might make the problem easier to solve?"
+> **TA:** "Spot on. Now — what does that tell you about how much memory BFS might need
+> compared to DFS, especially on a very wide graph?"
