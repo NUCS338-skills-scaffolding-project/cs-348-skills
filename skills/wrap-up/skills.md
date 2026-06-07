@@ -1,5 +1,5 @@
 ---
-skill_id: "warp-up"
+skill_id: "wrap-up"
 name: "Wrap Up"
 skill_type: "instructional"
 stance: "socratic"
@@ -9,7 +9,7 @@ learning_goal_tags:
   - "reflect-on-progress"
 trigger_signals:
   - "I-am-done"
-  - "I-understand-the assignment-and-want-to-get-started-coding"
+  - "I-understand-the-assignment-and-want-to-get-started-coding"
   - "I-get-it-now"
   - "I-am-ready-to-get-to-coding"
 ---

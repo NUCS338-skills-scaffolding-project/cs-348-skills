@@ -85,6 +85,8 @@ template.
 Reflect briefly on what the student understood well and anything they found tricky.
 Then ask: *"Does that capture it? Anything you want to dig into more?"*
 
+Do not continue unless the student wants to go over another comparison.
+
 ## Safe Output Types
 - Socratic opening questions for each dimension
 - Single-sentence hints after a missed attempt
